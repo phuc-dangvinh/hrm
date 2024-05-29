@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using hrm.Entities;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -24,6 +25,30 @@ public class hrmDbContext :
     ITenantManagementDbContext
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
+
+    public DbSet<Address> Addresses { get; set; }
+    public DbSet<AdministrativeUnit> AdministrativeUnits { get; set; }
+    public DbSet<Bank> Banks { get; set; }
+    public DbSet<BankAccount> BankAccounts { get; set; }
+    public DbSet<Blacklist> Blacklists { get; set; }
+    public DbSet<Citizen> Citizens { get; set; }
+    public DbSet<Company> Companies { get; set; }
+    public DbSet<DeductionsDependent> DeductionsDependents { get; set; }
+    public DbSet<Department> Departments { get; set; }
+    public DbSet<Education> Educations { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<EnglishCertificate> EnglishCertificates { get; set; }
+    public DbSet<ITCertificate> ITCertificates { get; set; }
+    public DbSet<LeaveJobDetail> LeaveJobDetails { get; set; }
+    public DbSet<LeaveJobGroup> LeaveJobGroups { get; set; }
+    public DbSet<Level> Levels { get; set; }
+    public DbSet<OtherCertificate> OtherCertificates { get; set; }
+    public DbSet<Outlet> Outlets { get; set; }
+    public DbSet<OutletManagement> OutletManagements { get; set; }
+    public DbSet<Position> Positions { get; set; }
+    public DbSet<Property> Properties { get; set; }
+    public DbSet<Relationship> Relationships { get; set; }
+    public DbSet<RelativesContact> RelativesContacts { get; set; }
 
     #region Entities from the modules
 
