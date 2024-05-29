@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 using Volo.Abp.Domain.Entities.Auditing;
 
 namespace hrm.Entities
@@ -19,6 +15,6 @@ namespace hrm.Entities
         public Guid LevelId { get; set; }
         [ForeignKey(nameof(LevelId))]
         public Level Level { get; set; }
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<Employee>? Employees { get; set; }
     }
 }

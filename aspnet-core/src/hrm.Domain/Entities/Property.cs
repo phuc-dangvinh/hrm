@@ -11,7 +11,7 @@ namespace hrm.Entities
         public Guid CompanyId { get; set; }
         [ForeignKey(nameof(CompanyId))]
         public Company Company { get; set; }
-        public ICollection<Department> Departments { get; set; }
-        public ICollection<OutletManagement> OutletManagements { get; set; }
+        public ICollection<Department>? Departments { get; set; }
+        public ICollection<OutletManagement>? OutletManagements { get; set; }
     }
 }

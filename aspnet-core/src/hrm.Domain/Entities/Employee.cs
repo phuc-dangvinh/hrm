@@ -39,16 +39,16 @@ namespace hrm.Entities
         public Guid EducationId { get; set; }
         [ForeignKey(nameof(EducationId))]
         public Education Education { get; set; }
-        public ICollection<EnglishCertificate> EnglishCertificates { get; set; }
-        public ICollection<ITCertificate> ITCertificates { get; set; }
-        public ICollection<OtherCertificate> OtherCertificates { get; set; }
+        public ICollection<EnglishCertificate>? EnglishCertificates { get; set; }
+        public ICollection<ITCertificate>? ITCertificates { get; set; }
+        public ICollection<OtherCertificate>? OtherCertificates { get; set; }
         public Guid AddressId { get; set; }
         [ForeignKey(nameof(AddressId))]
         public Address Address { get; set; }
-        public ICollection<LeaveJobDetail> LeaveJobs { get; set; }
-        public ICollection<Blacklist> Blacklists { get; set; }
-        public ICollection<RelativesContact> RelativesContacts { get; set; }
-        public ICollection<DeductionsDependent> DeductionsDependents { get; set; }
-        public ICollection<BankAccount> BankAccounts { get; set; }
+        public ICollection<LeaveJobDetail>? LeaveJobs { get; set; }
+        public ICollection<Blacklist>? Blacklists { get; set; }
+        public ICollection<RelativesContact>? RelativesContacts { get; set; }
+        public ICollection<DeductionsDependent>? DeductionsDependents { get; set; }
+        public ICollection<BankAccount>? BankAccounts { get; set; }
     }
 }

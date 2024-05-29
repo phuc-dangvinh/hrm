@@ -13,9 +13,9 @@ namespace hrm.Entities
         public Guid PropertyId { get; set; }
         [ForeignKey(nameof(PropertyId))]
         public Property Property { get; set; }
-        public ICollection<Employee> Employees { get; set; }
-        public ICollection<Position> Positions { get; set; }
-        public ICollection<OutletManagement> OutletManagements { get; set; }
+        public ICollection<Employee>? Employees { get; set; }
+        public ICollection<Position>? Positions { get; set; }
+        public ICollection<OutletManagement>? OutletManagements { get; set; }
 
     }
 }
